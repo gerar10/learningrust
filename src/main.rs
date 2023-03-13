@@ -16,24 +16,26 @@ fn car_quality (miles: u32) -> (Age, u32) {
     (Age::New, miles)
 }
 
-fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Car {
-  if car_quality(miles).0 == Age::Used {
-      if roof {
-          println!("Preparing a used car: {:?}, {}, Hard top, {} miles ", motor, color, miles);
-      } else {
-          println!("Preparing a used car: {:?}, {}, Convertible, {} miles", motor, color, miles);
-      } 
-      }
-      else {
-          if roof {
-              println!("Building a new car: {:?}, {}, Hard top, {} miles", motor, color, miles);
-          } else {
-              println!("biulding a new car: {:?}, {}, Convertible, {} miles", motor, color, miles)
-          }
-      }
+fn car_factory(order: i32, miles: u32) -> Car {
+
+  let colors = ["Blue", "Green", "Red", "Silver"];  
+
+  let mut color = order as usize;
+  while color > 4 {
+    color = color -4
+  }  
+
+  let mut motor = Transmission::Manual;
+  let mut roof = true;
+  if order % 3 == 0 {
+    motor = Transmission::Automatic;
+  } else if order % 2 == 0 {
+    motor = Transmission::SemiAuto;
+    roof = false;
+  }
 
   Car {
-      color: color,
+      color: String::from(colors[(color-1) as usize]),
       motor: motor,
       roof: roof,
       age: car_quality(miles)
@@ -41,62 +43,29 @@ fn car_factory(color: String, motor: Transmission, roof: bool, miles: u32) -> Ca
 }
 
 fn main() {
-  car_factory(String::from("Orange"), Transmission::Manual, true, 0);
+  use std::collections::HashMap;
+  let mut orders: HashMap<i32, Car> = HashMap::new();
 
-  car_factory(String::from("Red"), Transmission::SemiAuto, false, 565);
+  let mut car: Car;    
 
-  car_factory(String::from("White"), Transmission::Automatic, true, 3000);
+  let mut miles = 0;
 
-  let mut reviews: HashMap<String, String> = HashMap::new();
-  reviews.insert(String::from("Ancient Roman History"), String::from("Very accurate."));
-  reviews.insert(String::from("Cooking with Rhubarb"), String::from("Sweet recipes."));
-  reviews.insert(String::from("Programming in Rust"), String::from("Great examples."));
-  let book: &str = "Programming in Rust";
-  println!("\nReview for \'{}\': {:?}", book, reviews.get(book));
+  for order in 1..12 {
+    car = car_factory(order, miles);
+    orders.insert(order, car);
+    println!("Car order {}: {:?}", order, orders.get(&order));
 
-
-  let obsolete: &str = "Ancient Roman History";
-  println!("\n'{}\' removed.", obsolete);
-  reviews.remove(obsolete);
-
-  println!("\nReview for \'{}\': {:?}", obsolete, reviews.get(obsolete));
-
-  prueba();
-  contando();
-  iterando();
-}
-
-fn prueba() {
-    loop {
-        println!("We loop forever!");
-        break;
+    if miles == 2100 {
+      miles = 0;
     }
-
-let mut contador =1;
-let stop_loop = loop {
-    contador *= 2;
-    if contador > 100 {
-        break contador
+    else {
+      miles = miles + 700;
     }
-};    
-println!("Break the loop at counter = {}", stop_loop)
+  }
 }
 
-fn contando () {
-    let mut counter = 1;
-    while counter < 5 {
-        println!("We loop a while... {}", counter);
-        counter = counter + 1;
-    }
-}
 
-fn iterando () {
-    let big_birds = ["ostrich", "peacock", "stork"];
-    for bird in big_birds.iter() {
-        println!("The {} is a big bird.", bird);
-        }
 
-    for number in 0..5 {
-        println!("{}", number * 2);
-    }    
-}
+
+
+
