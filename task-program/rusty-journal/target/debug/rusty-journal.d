@@ -1,0 +1,1 @@
+/home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/target/debug/rusty-journal: /home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/src/cli.rs /home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/src/main.rs /home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/src/tasks.rs

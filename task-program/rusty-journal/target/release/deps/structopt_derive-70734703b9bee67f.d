@@ -1,0 +1,10 @@
+/home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/target/release/deps/libstructopt_derive-70734703b9bee67f.so: /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/lib.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/attrs.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/doc_comments.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/parse.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/spanned.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/ty.rs
+
+/home/gerardo/Desktop/rust-pruebas/task-program/rusty-journal/target/release/deps/structopt_derive-70734703b9bee67f.d: /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/lib.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/attrs.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/doc_comments.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/parse.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/spanned.rs /home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/ty.rs
+
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/lib.rs:
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/attrs.rs:
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/doc_comments.rs:
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/parse.rs:
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/spanned.rs:
+/home/gerardo/.cargo/registry/src/github.com-1ecc6299db9ec823/structopt-derive-0.4.18/src/ty.rs:
